@@ -1,0 +1,40 @@
+MPLINK 4.31, Linker
+Linker Map File - Created Mon Dec 17 18:31:19 2018
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x000036
+  .config_2007_DISPLAY7.O       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00001a      
+                            0x002007    0x002007      
+            28 out of 1093 program addresses used, program memory utilization is 2%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+     Binario_a_7Segmentos   0x00000a    program     static C:\Users\BrandonGarcia\Desktop\displayABCDEF\display7.asm
+                   INICIO   0x000000    program     static C:\Users\BrandonGarcia\Desktop\displayABCDEF\display7.asm
+                Principal   0x000005    program     static C:\Users\BrandonGarcia\Desktop\displayABCDEF\display7.asm
+                    Tabla   0x00000b    program     static C:\Users\BrandonGarcia\Desktop\displayABCDEF\display7.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000000    program     static C:\Users\BrandonGarcia\Desktop\displayABCDEF\display7.asm
+                Principal   0x000005    program     static C:\Users\BrandonGarcia\Desktop\displayABCDEF\display7.asm
+     Binario_a_7Segmentos   0x00000a    program     static C:\Users\BrandonGarcia\Desktop\displayABCDEF\display7.asm
+                    Tabla   0x00000b    program     static C:\Users\BrandonGarcia\Desktop\displayABCDEF\display7.asm
+
+

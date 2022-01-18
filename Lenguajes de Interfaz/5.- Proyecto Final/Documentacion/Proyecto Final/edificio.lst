@@ -1,0 +1,951 @@
+MPASM  5.31                      EDIFICIO.ASM   1-8-2019  20:00:37         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[205]: Found directive in column 1. (LIST)
+                      00001 LIST P=16F84A
+                      00002    INCLUDE <P16F84A.INC>
+                      00001         LIST
+                      00002 ; P16F84A.INC  Standard Header File, Version 2.00    Microchip Technology, Inc.
+                      00134         LIST
+Warning[205]: Found directive in column 1. (__CONFIG)
+2007   3FF1           00003 __CONFIG _CP_OFF & _WDT_OFF & _PWRTE_ON & _XT_OSC
+Warning[205]: Found directive in column 1. (CBLOCK)
+                      00004 CBLOCK 0x0c
+                      00005 
+Warning[205]: Found directive in column 1. (ENDC)
+                      00006 ENDC 
+                      00007 
+                      00008 
+Warning[205]: Found directive in column 1. (ORG)
+0000                  00009 ORG 0
+                      00010 
+Warning[203]: Found opcode in column 1. (BSF)
+0000   1683           00011 BSF STATUS,RP0 ; BIT EN UNO
+Warning[203]: Found opcode in column 1. (CLRF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0001   0186           00012 CLRF TRISB     ;SALIDA
+Warning[203]: Found opcode in column 1. (BCF)
+0002   1283           00013 BCF STATUS,RP0 ;INGRESO AL BANCO 0 
+                      00014 
+                      00015 
+0003                  00016 INICIO ;PRIMERA FUNCION
+                      00017  
+                      00018 
+0003   3081           00019         MOVLW D'129'
+0004   0086           00020         MOVWF PORTB
+0005   220B           00021         call Retardo_500ms
+0006   3082           00022         MOVLW D'130'
+0007   0086           00023         MOVWF PORTB
+0008   220B           00024         call Retardo_500ms
+0009   3084           00025         MOVLW D'132'
+000A   0086           00026         MOVWF PORTB
+000B   220B           00027         call Retardo_500ms
+000C   3088           00028         MOVLW D'136'
+000D   0086           00029         MOVWF PORTB
+000E   220B           00030         call Retardo_500ms
+000F   3041           00031         MOVLW D'65'
+0010   0086           00032         MOVWF PORTB
+0011   220B           00033         call Retardo_500ms
+0012   3042           00034         MOVLW D'66'
+0013   0086           00035         MOVWF PORTB
+0014   220B           00036         call Retardo_500ms
+0015   3044           00037         MOVLW D'68'
+0016   0086           00038         MOVWF PORTB
+0017   220B           00039         call Retardo_500ms
+0018   3048           00040         MOVLW D'72'
+0019   0086           00041         MOVWF PORTB
+MPASM  5.31                      EDIFICIO.ASM   1-8-2019  20:00:37         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+001A   220B           00042         call Retardo_500ms
+001B   3021           00043         MOVLW D'33'
+001C   0086           00044         MOVWF PORTB
+001D   220B           00045         call Retardo_500ms
+001E   3022           00046         MOVLW D'34'
+001F   0086           00047         MOVWF PORTB
+0020   220B           00048         call Retardo_500ms
+0021   3026           00049         MOVLW D'38'
+0022   0086           00050         MOVWF PORTB
+0023   220B           00051         call Retardo_500ms
+0024   3028           00052         MOVLW D'40'
+0025   0086           00053         MOVWF PORTB
+0026   220B           00054         call Retardo_500ms
+0027   3011           00055         MOVLW D'17'
+0028   0086           00056         MOVWF PORTB
+0029   220B           00057         call Retardo_500ms
+002A   3012           00058         MOVLW D'18'
+002B   0086           00059         MOVWF PORTB
+002C   220B           00060         call Retardo_500ms
+002D   3014           00061         MOVLW D'20'
+002E   0086           00062         MOVWF PORTB
+002F   220B           00063         call Retardo_500ms
+0030   3018           00064         MOVLW D'24'
+0031   0086           00065         MOVWF PORTB
+0032   220B           00066         call Retardo_500ms
+                      00067 
+                      00068 
+                      00069 
+                      00070                           
+                      00071 
+                      00072 
+                      00073 ;INICIO DE SEGUNDA FUNCION 
+                      00074  
+                      00075 
+0033   3081           00076         MOVLW D'129'
+0034   0086           00077         MOVWF PORTB
+0035   21EB           00078         call Retardo_100ms
+0036   3082           00079         MOVLW D'130'
+0037   0086           00080         MOVWF PORTB
+0038   21EB           00081         call Retardo_100ms
+0039   3084           00082         MOVLW D'132'
+003A   0086           00083         MOVWF PORTB
+003B   21EB           00084         call Retardo_100ms
+003C   3088           00085         MOVLW D'136'
+003D   0086           00086         MOVWF PORTB
+003E   21EB           00087         call Retardo_100ms
+003F   3041           00088         MOVLW D'65'
+0040   0086           00089         MOVWF PORTB
+0041   21EB           00090         call Retardo_100ms
+0042   3042           00091         MOVLW D'66'
+0043   0086           00092         MOVWF PORTB
+0044   21EB           00093         call Retardo_100ms
+0045   3044           00094         MOVLW D'68'
+MPASM  5.31                      EDIFICIO.ASM   1-8-2019  20:00:37         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0046   0086           00095         MOVWF PORTB
+0047   21EB           00096         call Retardo_100ms
+0048   3048           00097         MOVLW D'72'
+0049   0086           00098         MOVWF PORTB
+004A   21EB           00099         call Retardo_100ms
+004B   3021           00100         MOVLW D'33'
+004C   0086           00101         MOVWF PORTB
+004D   21EB           00102         call Retardo_100ms
+004E   3022           00103         MOVLW D'34'
+004F   0086           00104         MOVWF PORTB
+0050   21EB           00105         call Retardo_100ms
+0051   3026           00106         MOVLW D'38'
+0052   0086           00107         MOVWF PORTB
+0053   21EB           00108         call Retardo_100ms
+0054   3028           00109         MOVLW D'40'
+0055   0086           00110         MOVWF PORTB
+0056   21EB           00111         call Retardo_100ms
+0057   3011           00112         MOVLW D'17'
+0058   0086           00113         MOVWF PORTB
+0059   21EB           00114         call Retardo_100ms
+005A   3012           00115         MOVLW D'18'
+005B   0086           00116         MOVWF PORTB
+005C   21EB           00117         call Retardo_100ms
+005D   3014           00118         MOVLW D'20'
+005E   0086           00119         MOVWF PORTB
+005F   21EB           00120         call Retardo_100ms
+0060   3018           00121         MOVLW D'24'
+0061   0086           00122         MOVWF PORTB
+0062   21EB           00123         call Retardo_100ms
+0063   3081           00124         MOVLW D'129'
+0064   0086           00125         MOVWF PORTB
+0065   21EB           00126         call Retardo_100ms
+0066   3082           00127         MOVLW D'130'
+0067   0086           00128         MOVWF PORTB
+0068   21EB           00129         call Retardo_100ms
+0069   3084           00130         MOVLW D'132'
+006A   0086           00131         MOVWF PORTB
+006B   21EB           00132         call Retardo_100ms
+006C   3088           00133         MOVLW D'136'
+006D   0086           00134         MOVWF PORTB
+006E   21EB           00135         call Retardo_100ms
+006F   3041           00136         MOVLW D'65'
+0070   0086           00137         MOVWF PORTB
+0071   21EB           00138         call Retardo_100ms
+0072   3042           00139         MOVLW D'66'
+0073   0086           00140         MOVWF PORTB
+0074   21EB           00141         call Retardo_100ms
+0075   3044           00142         MOVLW D'68'
+0076   0086           00143         MOVWF PORTB
+0077   21EB           00144         call Retardo_100ms
+0078   3048           00145         MOVLW D'72'
+0079   0086           00146         MOVWF PORTB
+007A   21EB           00147         call Retardo_100ms
+MPASM  5.31                      EDIFICIO.ASM   1-8-2019  20:00:37         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+007B   3021           00148         MOVLW D'33'
+007C   0086           00149         MOVWF PORTB
+007D   21EB           00150         call Retardo_100ms
+007E   3022           00151         MOVLW D'34'
+007F   0086           00152         MOVWF PORTB
+0080   21EB           00153         call Retardo_100ms
+0081   3026           00154         MOVLW D'38'
+0082   0086           00155         MOVWF PORTB
+0083   21EB           00156         call Retardo_100ms
+0084   3028           00157         MOVLW D'40'
+0085   0086           00158         MOVWF PORTB
+0086   21EB           00159         call Retardo_100ms
+0087   3011           00160         MOVLW D'17'
+0088   0086           00161         MOVWF PORTB
+0089   21EB           00162         call Retardo_100ms
+008A   3012           00163         MOVLW D'18'
+008B   0086           00164         MOVWF PORTB
+008C   21EB           00165         call Retardo_100ms
+008D   3014           00166         MOVLW D'20'
+008E   0086           00167         MOVWF PORTB
+008F   21EB           00168         call Retardo_100ms
+0090   3018           00169         MOVLW D'24'
+0091   0086           00170         MOVWF PORTB
+0092   21EB           00171         call Retardo_100ms
+                      00172 
+                      00173                                              
+                      00174 ;INICIO TERCERA FUNCION 
+                      00175 
+                      00176 
+0093   308F           00177         MOVLW D'143'
+0094   0086           00178         MOVWF PORTB
+0095   220B           00179         call Retardo_500ms
+0096   304F           00180         MOVLW D'79'
+0097   0086           00181         MOVWF PORTB
+0098   220B           00182         call Retardo_500ms
+0099   302F           00183         MOVLW D'47'
+009A   0086           00184         MOVWF PORTB
+009B   220B           00185         call Retardo_500ms
+009C   301F           00186         MOVLW D'31'
+009D   0086           00187         MOVWF PORTB
+009E   220B           00188         call Retardo_500ms
+009F   308F           00189         MOVLW D'143'
+00A0   0086           00190         MOVWF PORTB
+00A1   21E9           00191         call Retardo_200ms
+00A2   304F           00192         MOVLW D'79'
+00A3   0086           00193         MOVWF PORTB
+00A4   21E9           00194         call Retardo_200ms
+00A5   302F           00195         MOVLW D'47'
+00A6   0086           00196         MOVWF PORTB
+00A7   21E9           00197         call Retardo_200ms
+00A8   301F           00198         MOVLW D'31'
+00A9   0086           00199         MOVWF PORTB
+00AA   21E9           00200         call Retardo_200ms
+MPASM  5.31                      EDIFICIO.ASM   1-8-2019  20:00:37         PAGE  5
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00201 
+                      00202                                         
+                      00203 ;INICIO DE CUARTA FUNCION
+                      00204 
+00AB   3011           00205         MOVLW D'17'
+00AC   0086           00206         MOVWF PORTB
+00AD   21EB           00207         call Retardo_100ms
+00AE   3012           00208         MOVLW D'18'
+00AF   0086           00209         MOVWF PORTB
+00B0   21EB           00210         call Retardo_100ms
+00B1   3014           00211         MOVLW D'20'
+00B2   0086           00212         MOVWF PORTB
+00B3   21EB           00213         call Retardo_100ms
+00B4   3018           00214         MOVLW D'24'
+00B5   0086           00215         MOVWF PORTB
+00B6   21EB           00216         call Retardo_100ms
+00B7   3021           00217         MOVLW D'33'
+00B8   0086           00218         MOVWF PORTB
+00B9   21EB           00219         call Retardo_100ms
+00BA   3022           00220         MOVLW D'34'
+00BB   0086           00221         MOVWF PORTB
+00BC   21EB           00222         call Retardo_100ms
+00BD   3026           00223         MOVLW D'38'
+00BE   0086           00224         MOVWF PORTB
+00BF   21EB           00225         call Retardo_100ms
+00C0   3028           00226         MOVLW D'40'
+00C1   0086           00227         MOVWF PORTB
+00C2   21EB           00228         call Retardo_100ms
+00C3   3041           00229         MOVLW D'65'
+00C4   0086           00230         MOVWF PORTB
+00C5   21EB           00231         call Retardo_100ms
+00C6   3042           00232         MOVLW D'66'
+00C7   0086           00233         MOVWF PORTB
+00C8   21EB           00234         call Retardo_100ms
+00C9   3044           00235         MOVLW D'68'
+00CA   0086           00236         MOVWF PORTB
+00CB   21EB           00237         call Retardo_100ms
+00CC   3048           00238         MOVLW D'72'
+00CD   0086           00239         MOVWF PORTB
+00CE   21EB           00240         call Retardo_100ms
+00CF   3081           00241         MOVLW D'129'
+00D0   0086           00242         MOVWF PORTB
+00D1   21EB           00243         call Retardo_100ms
+00D2   3082           00244         MOVLW D'130'
+00D3   0086           00245         MOVWF PORTB
+00D4   21EB           00246         call Retardo_100ms
+00D5   3084           00247         MOVLW D'132'
+00D6   0086           00248         MOVWF PORTB
+00D7   21EB           00249         call Retardo_100ms
+00D8   3088           00250         MOVLW D'136'
+00D9   0086           00251         MOVWF PORTB
+00DA   21EB           00252         call Retardo_100ms
+00DB   3011           00253          MOVLW D'17'
+MPASM  5.31                      EDIFICIO.ASM   1-8-2019  20:00:37         PAGE  6
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+00DC   0086           00254         MOVWF PORTB
+00DD   21EB           00255         call Retardo_100ms
+00DE   3012           00256         MOVLW D'18'
+00DF   0086           00257         MOVWF PORTB
+00E0   21EB           00258         call Retardo_100ms
+00E1   3014           00259         MOVLW D'20'
+00E2   0086           00260         MOVWF PORTB
+00E3   21EB           00261         call Retardo_100ms
+00E4   3018           00262         MOVLW D'24'
+00E5   0086           00263         MOVWF PORTB
+00E6   21EB           00264         call Retardo_100ms
+00E7   3021           00265         MOVLW D'33'
+00E8   0086           00266         MOVWF PORTB
+00E9   21EB           00267         call Retardo_100ms
+00EA   3022           00268         MOVLW D'34'
+00EB   0086           00269         MOVWF PORTB
+00EC   21EB           00270         call Retardo_100ms
+00ED   3026           00271         MOVLW D'38'
+00EE   0086           00272         MOVWF PORTB
+00EF   21EB           00273         call Retardo_100ms
+00F0   3028           00274         MOVLW D'40'
+00F1   0086           00275         MOVWF PORTB
+00F2   21EB           00276         call Retardo_100ms
+00F3   3041           00277         MOVLW D'65'
+00F4   0086           00278         MOVWF PORTB
+00F5   21EB           00279         call Retardo_100ms
+00F6   3042           00280         MOVLW D'66'
+00F7   0086           00281         MOVWF PORTB
+00F8   21EB           00282         call Retardo_100ms
+00F9   3044           00283         MOVLW D'68'
+00FA   0086           00284         MOVWF PORTB
+00FB   21EB           00285         call Retardo_100ms
+00FC   3048           00286         MOVLW D'72'
+00FD   0086           00287         MOVWF PORTB
+00FE   21EB           00288         call Retardo_100ms
+00FF   3081           00289         MOVLW D'129'
+0100   0086           00290         MOVWF PORTB
+0101   21EB           00291         call Retardo_100ms
+0102   3082           00292         MOVLW D'130'
+0103   0086           00293         MOVWF PORTB
+0104   21EB           00294         call Retardo_100ms
+0105   3084           00295         MOVLW D'132'
+0106   0086           00296         MOVWF PORTB
+0107   21EB           00297         call Retardo_100ms
+0108   3088           00298         MOVLW D'136'
+0109   0086           00299         MOVWF PORTB
+010A   21EB           00300         call Retardo_100ms
+                      00301 
+                      00302                                    
+                      00303 
+                      00304 ; INICIO QUINTA FUNCION 
+                      00305 
+010B   30FF           00306         MOVLW B'11111111'
+MPASM  5.31                      EDIFICIO.ASM   1-8-2019  20:00:37         PAGE  7
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+010C   0086           00307         MOVWF PORTB
+010D   220B           00308         call Retardo_500ms
+010E   30FE           00309         MOVLW B'11111110'
+010F   0086           00310         MOVWF PORTB
+0110   220B           00311         call Retardo_500ms
+0111   30FD           00312         MOVLW B'11111101'
+0112   0086           00313         MOVWF PORTB
+0113   220B           00314         call Retardo_500ms
+0114   30FB           00315         MOVLW B'11111011'
+0115   0086           00316         MOVWF PORTB
+0116   220B           00317         call Retardo_500ms
+0117   30F7           00318         MOVLW B'11110111'
+0118   0086           00319         MOVWF PORTB
+0119   220B           00320         call Retardo_500ms
+011A   30FF           00321         MOVLW B'11111111'
+011B   0086           00322         MOVWF PORTB
+011C   220B           00323         call Retardo_500ms
+011D   30FE           00324         MOVLW B'11111110'
+011E   0086           00325         MOVWF PORTB
+011F   220B           00326         call Retardo_500ms
+0120   30FD           00327         MOVLW B'11111101'
+0121   0086           00328         MOVWF PORTB
+0122   220B           00329         call Retardo_500ms
+0123   30FB           00330         MOVLW B'11111011'
+0124   0086           00331         MOVWF PORTB
+0125   220B           00332         call Retardo_500ms
+0126   30F7           00333         MOVLW B'11110111'
+0127   0086           00334         MOVWF PORTB
+0128   220B           00335         call Retardo_500ms
+0129   30FF           00336         MOVLW B'11111111'
+012A   0086           00337         MOVWF PORTB
+012B   220B           00338         call Retardo_500ms
+012C   30FE           00339         MOVLW B'11111110'
+012D   0086           00340         MOVWF PORTB
+012E   220B           00341         call Retardo_500ms
+012F   30FD           00342         MOVLW B'11111101'
+0130   0086           00343         MOVWF PORTB
+0131   220B           00344         call Retardo_500ms
+0132   30FB           00345         MOVLW B'11111011'
+0133   0086           00346         MOVWF PORTB
+0134   220B           00347         call Retardo_500ms
+0135   30F7           00348         MOVLW B'11110111'
+0136   0086           00349         MOVWF PORTB
+0137   220B           00350         call Retardo_500ms
+0138   30FF           00351         MOVLW B'11111111'
+0139   0086           00352         MOVWF PORTB
+013A   220B           00353         call Retardo_500ms
+013B   30FE           00354         MOVLW B'11111110'
+013C   0086           00355         MOVWF PORTB
+013D   220B           00356         call Retardo_500ms
+013E   30FD           00357         MOVLW B'11111101'
+013F   0086           00358         MOVWF PORTB
+0140   220B           00359         call Retardo_500ms
+MPASM  5.31                      EDIFICIO.ASM   1-8-2019  20:00:37         PAGE  8
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0141   30FB           00360         MOVLW B'11111011'
+0142   0086           00361         MOVWF PORTB
+0143   220B           00362         call Retardo_500ms
+0144   30F7           00363         MOVLW B'11110111'
+0145   0086           00364         MOVWF PORTB
+0146   220B           00365         call Retardo_500ms
+                      00366 
+0147   30FF           00367         MOVLW B'11111111'
+0148   0086           00368         MOVWF PORTB
+0149   21EB           00369         call Retardo_100ms
+014A   30FE           00370         MOVLW B'11111110'
+014B   0086           00371         MOVWF PORTB
+014C   21EB           00372         call Retardo_100ms
+014D   30FD           00373         MOVLW B'11111101'
+014E   0086           00374         MOVWF PORTB
+014F   21EB           00375         call Retardo_100ms
+0150   30FB           00376         MOVLW B'11111011'
+0151   0086           00377         MOVWF PORTB
+0152   21EB           00378         call Retardo_100ms
+0153   30F7           00379         MOVLW B'11110111'
+0154   0086           00380         MOVWF PORTB
+0155   21EB           00381         call Retardo_100ms
+0156   30FF           00382         MOVLW B'11111111'
+0157   0086           00383         MOVWF PORTB
+0158   21EB           00384         call Retardo_100ms
+0159   30FE           00385         MOVLW B'11111110'
+015A   0086           00386         MOVWF PORTB
+015B   21EB           00387         call Retardo_100ms
+015C   30FD           00388         MOVLW B'11111101'
+015D   0086           00389         MOVWF PORTB
+015E   21EB           00390         call Retardo_100ms
+015F   30FB           00391         MOVLW B'11111011'
+0160   0086           00392         MOVWF PORTB
+0161   21EB           00393         call Retardo_100ms
+0162   30F7           00394         MOVLW B'11110111'
+0163   0086           00395         MOVWF PORTB
+0164   21EB           00396         call Retardo_100ms
+0165   30FF           00397         MOVLW B'11111111'
+0166   0086           00398         MOVWF PORTB
+0167   21EB           00399         call Retardo_100ms
+0168   30FE           00400         MOVLW B'11111110'
+0169   0086           00401         MOVWF PORTB
+016A   21EB           00402         call Retardo_100ms
+016B   30FD           00403         MOVLW B'11111101'
+016C   0086           00404         MOVWF PORTB
+016D   21EB           00405         call Retardo_100ms
+016E   30FB           00406         MOVLW B'11111011'
+016F   0086           00407         MOVWF PORTB
+0170   21EB           00408         call Retardo_100ms
+0171   30F7           00409         MOVLW B'11110111'
+0172   0086           00410         MOVWF PORTB
+0173   21EB           00411         call Retardo_100ms
+0174   30FF           00412         MOVLW B'11111111'
+MPASM  5.31                      EDIFICIO.ASM   1-8-2019  20:00:37         PAGE  9
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0175   0086           00413         MOVWF PORTB
+0176   21EB           00414         call Retardo_100ms
+0177   30FE           00415         MOVLW B'11111110'
+0178   0086           00416         MOVWF PORTB
+0179   21EB           00417         call Retardo_100ms
+017A   30FD           00418         MOVLW B'11111101'
+017B   0086           00419         MOVWF PORTB
+017C   21EB           00420         call Retardo_100ms
+017D   30FB           00421         MOVLW B'11111011'
+017E   0086           00422         MOVWF PORTB
+017F   21EB           00423         call Retardo_100ms
+0180   30F7           00424         MOVLW B'11110111'
+0181   0086           00425         MOVWF PORTB
+0182   21EB           00426         call Retardo_100ms
+0183   30FF           00427         MOVLW B'11111111'
+0184   0086           00428         MOVWF PORTB
+0185   21EB           00429         call Retardo_100ms
+0186   30FE           00430         MOVLW B'11111110'
+0187   0086           00431         MOVWF PORTB
+0188   21EB           00432         call Retardo_100ms
+0189   30FD           00433         MOVLW B'11111101'
+018A   0086           00434         MOVWF PORTB
+018B   21EB           00435         call Retardo_100ms
+018C   30FB           00436         MOVLW B'11111011'
+018D   0086           00437         MOVWF PORTB
+018E   21EB           00438         call Retardo_100ms
+018F   30F7           00439         MOVLW B'11110111'
+0190   0086           00440         MOVWF PORTB
+0191   21EB           00441         call Retardo_100ms
+0192   30FF           00442         MOVLW B'11111111'
+0193   0086           00443         MOVWF PORTB
+0194   21EB           00444         call Retardo_100ms
+0195   30FE           00445         MOVLW B'11111110'
+0196   0086           00446         MOVWF PORTB
+0197   21EB           00447         call Retardo_100ms
+0198   30FD           00448         MOVLW B'11111101'
+0199   0086           00449         MOVWF PORTB
+019A   21EB           00450         call Retardo_100ms
+019B   30FB           00451         MOVLW B'11111011'
+019C   0086           00452         MOVWF PORTB
+019D   21EB           00453         call Retardo_100ms
+019E   30F7           00454         MOVLW B'11110111'
+019F   0086           00455         MOVWF PORTB
+01A0   21EB           00456         call Retardo_100ms
+01A1   30FF           00457         MOVLW B'11111111'
+01A2   0086           00458         MOVWF PORTB
+01A3   21EB           00459         call Retardo_100ms
+01A4   30FE           00460         MOVLW B'11111110'
+01A5   0086           00461         MOVWF PORTB
+01A6   21EB           00462         call Retardo_100ms
+01A7   30FD           00463         MOVLW B'11111101'
+01A8   0086           00464         MOVWF PORTB
+01A9   21EB           00465         call Retardo_100ms
+MPASM  5.31                      EDIFICIO.ASM   1-8-2019  20:00:37         PAGE 10
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+01AA   30FB           00466         MOVLW B'11111011'
+01AB   0086           00467         MOVWF PORTB
+01AC   21EB           00468         call Retardo_100ms
+01AD   30F7           00469         MOVLW B'11110111'
+01AE   0086           00470         MOVWF PORTB
+01AF   21EB           00471         call Retardo_100ms
+01B0   30FF           00472         MOVLW B'11111111'
+01B1   0086           00473         MOVWF PORTB
+01B2   21EB           00474         call Retardo_100ms
+01B3   30FE           00475         MOVLW B'11111110'
+01B4   0086           00476         MOVWF PORTB
+01B5   21EB           00477         call Retardo_100ms
+01B6   30FD           00478         MOVLW B'11111101'
+01B7   0086           00479         MOVWF PORTB
+01B8   21EB           00480         call Retardo_100ms
+01B9   30FB           00481         MOVLW B'11111011'
+01BA   0086           00482         MOVWF PORTB
+01BB   21EB           00483         call Retardo_100ms
+01BC   30F7           00484         MOVLW B'11110111'
+01BD   0086           00485         MOVWF PORTB
+01BE   21EB           00486         call Retardo_100ms
+                      00487 
+                      00488         ;SEXTA FUNCION
+                      00489 
+01BF   30FF           00490         MOVLW B'11111111'
+01C0   0086           00491         MOVWF PORTB
+01C1   220B           00492         call Retardo_500ms
+01C2   30FF           00493         MOVLW B'11111111'
+01C3   0086           00494         MOVWF PORTB
+01C4   220B           00495         call Retardo_500ms
+01C5   30FF           00496         MOVLW B'11111111'
+01C6   0086           00497         MOVWF PORTB
+01C7   220B           00498         call Retardo_500ms
+01C8   30FF           00499          MOVLW B'11111111'
+01C9   0086           00500         MOVWF PORTB
+01CA   220B           00501         call Retardo_500ms
+01CB   30FF           00502         MOVLW B'11111111'
+01CC   0086           00503         MOVWF PORTB
+01CD   220B           00504         call Retardo_500ms
+01CE   30FF           00505         MOVLW B'11111111'
+01CF   0086           00506         MOVWF PORTB
+01D0   220B           00507         call Retardo_500ms
+                      00508 
+                      00509 
+                      00510         
+                      00511 
+01D1   2803           00512         goto INICIO
+                      00513 
+                      00514 
+                      00515 
+                      00516 
+                      00517 
+Warning[205]: Found directive in column 1. (include)
+MPASM  5.31                      EDIFICIO.ASM   1-8-2019  20:00:37         PAGE 11
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00518 include<Retardos.inc>
+                      00001 ;**************************** Librería "RETARDOS.INC" *********************************
+                      00002 ;
+                      00003 ;       ===================================================================
+                      00004 ;         Del libro "MICROCONTROLADOR PIC16F84. DESARROLLO DE PROYECTOS"
+                      00005 ;         E. Palacios, F. Remiro y L. López.            www.pic16f84a.com
+                      00006 ;         Editorial Ra-Ma.  www.ra-ma.es
+                      00007 ;       ===================================================================
+                      00008 ;
+                      00009 ; Librería con múltiples subrutinas de retardos, desde 4 microsegundos hasta 20 segundos. 
+                      00010 ; Además se pueden implementar otras subrutinas muy fácilmente.
+                      00011 ;
+                      00012 ; Se han calculado para un sistema microcontrolador con un PIC trabajando con un cristal
+                      00013 ; de cuarzo a 4 MHz. Como cada ciclo máquina son 4 ciclos de reloj, resulta que cada
+                      00014 ; ciclo máquina tarda 4 x 1/4MHz = 1 µs.
+                      00015 ;
+                      00016 ; En los comentarios, "cm" significa "ciclos máquina".
+                      00017 ;
+                      00018 ; ZONA DE DATOS *********************************************************************
+                      00019 
+                      00020         CBLOCK
+  0000000C            00021         R_ContA                                         ; Contadores para los retardos.
+  0000000D            00022         R_ContB
+  0000000E            00023         R_ContC
+                      00024         ENDC
+                      00025 ;
+                      00026 ; RETARDOS de 4 hasta 10 microsegundos ---------------------------------------------------
+                      00027 ;
+                      00028 ; A continuación retardos pequeños teniendo en cuenta que para una frecuencia de 4 MHZ,
+                      00029 ; la llamada a subrutina "call" tarda 2 ciclos máquina, el retorno de subrutina
+                      00030 ; "return" toma otros 2 ciclos máquina y cada instrucción "nop" tarda 1 ciclo máquina.
+                      00031 ;
+01D2                  00032 Retardo_10micros                                ; La llamada "call" aporta 2 ciclos máquina.
+01D2   0000           00033         nop                                                     ; Aporta 1 ciclo máquina.
+01D3   0000           00034         nop                                                     ; Aporta 1 ciclo máquina.
+01D4   0000           00035         nop                                                     ; Aporta 1 ciclo máquina.
+01D5   0000           00036         nop                                                     ; Aporta 1 ciclo máquina.
+01D6   0000           00037         nop                                                     ; Aporta 1 ciclo máquina.
+01D7                  00038 Retardo_5micros                                 ; La llamada "call" aporta 2 ciclos máquina.
+01D7   0000           00039         nop                                                     ; Aporta 1 ciclo máquina.
+01D8                  00040 Retardo_4micros                                 ; La llamada "call" aporta 2 ciclos máquina.
+01D8   0008           00041         return                                          ; El salto del retorno aporta 2 ciclos máquina.
+                      00042 ;
+                      00043 ; RETARDOS de 20 hasta 500 microsegundos ------------------------------------------------
+                      00044 ;
+01D9                  00045 Retardo_500micros                               ; La llamada "call" aporta 2 ciclos máquina.
+01D9   0000           00046         nop                                                     ; Aporta 1 ciclo máquina.
+01DA   30A4           00047         movlw   d'164'                          ; Aporta 1 ciclo máquina. Este es el valor de "K".
+01DB   29E5           00048         goto    RetardoMicros           ; Aporta 2 ciclos máquina.
+01DC                  00049 Retardo_200micros                               ; La llamada "call" aporta 2 ciclos máquina.
+01DC   0000           00050         nop                                                     ; Aporta 1 ciclo máquina.
+01DD   3040           00051         movlw   d'64'                           ; Aporta 1 ciclo máquina. Este es el valor de "K".
+01DE   29E5           00052         goto    RetardoMicros           ; Aporta 2 ciclos máquina.
+MPASM  5.31                      EDIFICIO.ASM   1-8-2019  20:00:37         PAGE 12
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+01DF                  00053 Retardo_100micros                               ; La llamada "call" aporta 2 ciclos máquina.
+01DF   301F           00054         movlw   d'31'                           ; Aporta 1 ciclo máquina. Este es el valor de "K".
+01E0   29E5           00055         goto    RetardoMicros           ; Aporta 2 ciclos máquina.
+01E1                  00056 Retardo_50micros                                ; La llamada "call" aporta 2 ciclos máquina.
+01E1   0000           00057         nop                                                     ; Aporta 1 ciclo máquina.
+01E2   300E           00058         movlw   d'14'                           ; Aporta 1 ciclo máquina. Este es el valor de "K".
+01E3   29E5           00059         goto    RetardoMicros           ; Aporta 2 ciclos máquina.
+01E4                  00060 Retardo_20micros                                ; La llamada "call" aporta 2 ciclos máquina.
+01E4   3005           00061         movlw   d'5'                            ; Aporta 1 ciclo máquina. Este es el valor de "K".
+                      00062 ;
+                      00063 ; El próximo bloque "RetardoMicros" tarda:
+                      00064 ; 1 + (K-1) + 2 + (K-1)x2 + 2 = (2 + 3K) ciclos máquina.
+                      00065 ;
+01E5                  00066 RetardoMicros
+01E5   008C           00067         movwf   R_ContA                         ; Aporta 1 ciclo máquina.
+01E6                  00068 Rmicros_Bucle
+01E6   0B8C           00069         decfsz  R_ContA,F                       ; (K-1)x1 cm (cuando no salta) + 2 cm (al saltar).
+01E7   29E6           00070         goto    Rmicros_Bucle           ; Aporta (K-1)x2 ciclos máquina.
+01E8   0008           00071         return                                          ; El salto del retorno aporta 2 ciclos máquina.
+                      00072 ;
+                      00073 ;En total estas subrutinas tardan:
+                      00074 ; - Retardo_500micros:  2 + 1 + 1 + 2 + (2 + 3K) = 500 cm = 500 µs. (para K=164 y 4 MHz).
+                      00075 ; - Retardo_200micros:  2 + 1 + 1 + 2 + (2 + 3K) = 200 cm = 200 µs. (para K= 64 y 4 MHz).
+                      00076 ; - Retardo_100micros:  2     + 1 + 2 + (2 + 3K) = 100 cm = 100 µs. (para K= 31 y 4 MHz).
+                      00077 ; - Retardo_50micros :  2 + 1 + 1 + 2 + (2 + 3K) =  50 cm =  50 µs. (para K= 14 y 4 MHz).
+                      00078 ; - Retardo_20micros :  2     + 1     + (2 + 3K) =  20 cm =  20 µs. (para K=  5 y 4 MHz).
+                      00079 ;
+                      00080 ; RETARDOS de 1 ms hasta 200 ms. --------------------------------------------------------
+                      00081 ;
+01E9                  00082 Retardo_200ms                                   ; La llamada "call" aporta 2 ciclos máquina.
+01E9   30C8           00083         movlw   d'200'                          ; Aporta 1 ciclo máquina. Este es el valor de "M".
+01EA   29F8           00084         goto    Retardos_ms                     ; Aporta 2 ciclos máquina.
+01EB                  00085 Retardo_100ms                                   ; La llamada "call" aporta 2 ciclos máquina.
+01EB   3064           00086         movlw   d'100'                          ; Aporta 1 ciclo máquina. Este es el valor de "M".
+01EC   29F8           00087         goto    Retardos_ms                     ; Aporta 2 ciclos máquina.
+01ED                  00088 Retardo_50ms                                    ; La llamada "call" aporta 2 ciclos máquina.
+01ED   3032           00089         movlw   d'50'                           ; Aporta 1 ciclo máquina. Este es el valor de "M".
+01EE   29F8           00090         goto    Retardos_ms                     ; Aporta 2 ciclos máquina.
+01EF                  00091 Retardo_20ms                                    ; La llamada "call" aporta 2 ciclos máquina.
+01EF   3014           00092         movlw   d'20'                           ; Aporta 1 ciclo máquina. Este es el valor de "M".
+01F0   29F8           00093         goto    Retardos_ms                     ; Aporta 2 ciclos máquina.
+01F1                  00094 Retardo_10ms                                    ; La llamada "call" aporta 2 ciclos máquina.
+01F1   300A           00095         movlw   d'10'                           ; Aporta 1 ciclo máquina. Este es el valor de "M".
+01F2   29F8           00096         goto    Retardos_ms                     ; Aporta 2 ciclos máquina.
+01F3                  00097 Retardo_5ms                                             ; La llamada "call" aporta 2 ciclos máquina.
+01F3   3005           00098         movlw   d'5'                            ; Aporta 1 ciclo máquina. Este es el valor de "M".
+01F4   29F8           00099         goto    Retardos_ms                     ; Aporta 2 ciclos máquina.
+01F5                  00100 Retardo_2ms                                             ; La llamada "call" aporta 2 ciclos máquina.
+01F5   3002           00101         movlw   d'2'                            ; Aporta 1 ciclo máquina. Este es el valor de "M".
+01F6   29F8           00102         goto    Retardos_ms                     ; Aporta 2 ciclos máquina.
+01F7                  00103 Retardo_1ms                                             ; La llamada "call" aporta 2 ciclos máquina.
+01F7   3001           00104         movlw   d'1'                            ; Aporta 1 ciclo máquina. Este es el valor de "M".
+                      00105 ;
+MPASM  5.31                      EDIFICIO.ASM   1-8-2019  20:00:37         PAGE 13
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00106 ; El próximo bloque "Retardos_ms" tarda:
+                      00107 ; 1 + M + M + KxM + (K-1)xM + Mx2 + (K-1)Mx2 + (M-1) + 2 + (M-1)x2 + 2 =
+                      00108 ; = (2 + 4M + 4KM) ciclos máquina. Para K=249 y M=1 supone 1002 ciclos máquina
+                      00109 ; que a 4 MHz son 1002 µs = 1 ms.
+                      00110 ;
+01F8                  00111 Retardos_ms
+01F8   008D           00112         movwf   R_ContB                         ; Aporta 1 ciclo máquina.
+01F9                  00113 R1ms_BucleExterno
+01F9   30F9           00114         movlw   d'249'                          ; Aporta Mx1 ciclos máquina. Este es el valor de "K".
+01FA   008C           00115         movwf   R_ContA                         ; Aporta Mx1 ciclos máquina.
+01FB                  00116 R1ms_BucleInterno
+01FB   0000           00117         nop                                                     ; Aporta KxMx1 ciclos máquina.
+01FC   0B8C           00118         decfsz  R_ContA,F                       ; (K-1)xMx1 cm (cuando no salta) + Mx2 cm (al saltar).
+01FD   29FB           00119         goto    R1ms_BucleInterno       ; Aporta (K-1)xMx2 ciclos máquina.
+01FE   0B8D           00120         decfsz  R_ContB,F                       ; (M-1)x1 cm (cuando no salta) + 2 cm (al saltar).
+01FF   29F9           00121         goto    R1ms_BucleExterno       ; Aporta (M-1)x2 ciclos máquina.
+0200   0008           00122         return                                          ; El salto del retorno aporta 2 ciclos máquina.
+                      00123 ;
+                      00124 ;En total estas subrutinas tardan:
+                      00125 ; - Retardo_200ms:      2 + 1 + 2 + (2 + 4M + 4KM) = 200007 cm = 200 ms. (M=200 y K=249).
+                      00126 ; - Retardo_100ms:      2 + 1 + 2 + (2 + 4M + 4KM) = 100007 cm = 100 ms. (M=100 y K=249).
+                      00127 ; - Retardo_50ms :      2 + 1 + 2 + (2 + 4M + 4KM) =  50007 cm =  50 ms. (M= 50 y K=249).
+                      00128 ; - Retardo_20ms :      2 + 1 + 2 + (2 + 4M + 4KM) =  20007 cm =  20 ms. (M= 20 y K=249).
+                      00129 ; - Retardo_10ms :      2 + 1 + 2 + (2 + 4M + 4KM) =  10007 cm =  10 ms. (M= 10 y K=249).
+                      00130 ; - Retardo_5ms  :      2 + 1 + 2 + (2 + 4M + 4KM) =   5007 cm =   5 ms. (M=  5 y K=249).
+                      00131 ; - Retardo_2ms  :      2 + 1 + 2 + (2 + 4M + 4KM) =   2007 cm =   2 ms. (M=  2 y K=249).
+                      00132 ; - Retardo_1ms  :      2 + 1     + (2 + 4M + 4KM) =   1005 cm =   1 ms. (M=  1 y K=249).
+                      00133 ;
+                      00134 ; RETARDOS de 0.5 hasta 20 segundos ---------------------------------------------------
+                      00135 ;
+0201                  00136 Retardo_20s                                             ; La llamada "call" aporta 2 ciclos máquina.
+0201   30C8           00137         movlw   d'200'                          ; Aporta 1 ciclo máquina. Este es el valor de "N".
+0202   2A0C           00138         goto    Retardo_1Decima         ; Aporta 2 ciclos máquina.
+0203                  00139 Retardo_10s                                             ; La llamada "call" aporta 2 ciclos máquina.
+0203   3064           00140         movlw   d'100'                          ; Aporta 1 ciclo máquina. Este es el valor de "N".
+0204   2A0C           00141         goto    Retardo_1Decima         ; Aporta 2 ciclos máquina.
+0205                  00142 Retardo_5s                                              ; La llamada "call" aporta 2 ciclos máquina.
+0205   3032           00143         movlw   d'50'                           ; Aporta 1 ciclo máquina. Este es el valor de "N".
+0206   2A0C           00144         goto    Retardo_1Decima         ; Aporta 2 ciclos máquina.
+0207                  00145 Retardo_2s                                              ; La llamada "call" aporta 2 ciclos máquina.
+0207   3014           00146         movlw   d'20'                           ; Aporta 1 ciclo máquina. Este es el valor de "N".
+0208   2A0C           00147         goto    Retardo_1Decima         ; Aporta 2 ciclos máquina.
+0209                  00148 Retardo_1s                                              ; La llamada "call" aporta 2 ciclos máquina.
+0209   300A           00149         movlw   d'10'                           ; Aporta 1 ciclo máquina. Este es el valor de "N".
+020A   2A0C           00150         goto    Retardo_1Decima         ; Aporta 2 ciclos máquina.
+020B                  00151 Retardo_500ms                                   ; La llamada "call" aporta 2 ciclos máquina.
+020B   3005           00152         movlw   d'5'                            ; Aporta 1 ciclo máquina. Este es el valor de "N".
+                      00153 ;
+                      00154 ; El próximo bloque "Retardo_1Decima" tarda:
+                      00155 ; 1 + N + N + MxN + MxN + KxMxN + (K-1)xMxN + MxNx2 + (K-1)xMxNx2 +
+                      00156 ;   + (M-1)xN + Nx2 + (M-1)xNx2 + (N-1) + 2 + (N-1)x2 + 2 =
+                      00157 ; = (2 + 4M + 4MN + 4KM) ciclos máquina. Para K=249, M=100 y N=1 supone 100011
+                      00158 ; ciclos máquina que a 4 MHz son 100011 µs = 100 ms = 0,1 s = 1 décima de segundo.
+MPASM  5.31                      EDIFICIO.ASM   1-8-2019  20:00:37         PAGE 14
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00159 ;
+020C                  00160 Retardo_1Decima
+020C   008E           00161         movwf   R_ContC                         ; Aporta 1 ciclo máquina.
+020D                  00162 R1Decima_BucleExterno2
+020D   3064           00163         movlw   d'100'                          ; Aporta Nx1 ciclos máquina. Este es el valor de "M".
+020E   008D           00164         movwf   R_ContB                         ; Aporta Nx1 ciclos máquina.
+020F                  00165 R1Decima_BucleExterno
+020F   30F9           00166         movlw   d'249'                          ; Aporta MxNx1 ciclos máquina. Este es el valor de "K".
+0210   008C           00167         movwf   R_ContA                         ; Aporta MxNx1 ciclos máquina.
+0211                  00168 R1Decima_BucleInterno          
+0211   0000           00169         nop                                                     ; Aporta KxMxNx1 ciclos máquina.
+0212   0B8C           00170         decfsz  R_ContA,F                       ; (K-1)xMxNx1 cm (si no salta) + MxNx2 cm (al saltar).
+0213   2A11           00171         goto    R1Decima_BucleInterno   ; Aporta (K-1)xMxNx2 ciclos máquina.
+0214   0B8D           00172         decfsz  R_ContB,F                       ; (M-1)xNx1 cm (cuando no salta) + Nx2 cm (al saltar).
+0215   2A0F           00173         goto    R1Decima_BucleExterno   ; Aporta (M-1)xNx2 ciclos máquina.
+0216   0B8E           00174         decfsz  R_ContC,F                       ; (N-1)x1 cm (cuando no salta) + 2 cm (al saltar).
+0217   2A0D           00175         goto    R1Decima_BucleExterno2  ; Aporta (N-1)x2 ciclos máquina.
+0218   0008           00176         return                                          ; El salto del retorno aporta 2 ciclos máquina.
+                      00177 ;
+                      00178 ;En total estas subrutinas tardan:
+                      00179 ; - Retardo_20s:        2 + 1 + 2 + (2 + 4N + 4MN + 4KMN) = 20000807 cm = 20 s.
+                      00180 ;                       (N=200, M=100 y K=249).
+                      00181 ; - Retardo_10s:        2 + 1 + 2 + (2 + 4N + 4MN + 4KMN) = 10000407 cm = 10 s.
+                      00182 ;                       (N=100, M=100 y K=249).
+                      00183 ; - Retardo_5s:         2 + 1 + 2 + (2 + 4N + 4MN + 4KMN) =  5000207 cm =  5 s.
+                      00184 ;                       (N= 50, M=100 y K=249).
+                      00185 ; - Retardo_2s:         2 + 1 + 2 + (2 + 4N + 4MN + 4KMN) =  2000087 cm =  2 s.
+                      00186 ;                       (N= 20, M=100 y K=249).
+                      00187 ; - Retardo_1s:         2 + 1 + 2 + (2 + 4N + 4MN + 4KMN) =  1000047 cm =  1 s.
+                      00188 ;                       (N= 10, M=100 y K=249).
+                      00189 ; - Retardo_500ms:      2 + 1     + (2 + 4N + 4MN + 4KMN) =   500025 cm = 0,5 s.
+                      00190 ;                       (N=  5, M=100 y K=249).
+                      00191 
+                      00192 ;       ===================================================================
+                      00193 ;         Del libro "MICROCONTROLADOR PIC16F84. DESARROLLO DE PROYECTOS"
+                      00194 ;         E. Palacios, F. Remiro y L. López.            www.pic16f84a.com
+                      00195 ;         Editorial Ra-Ma.  www.ra-ma.es
+                      00196 ;       ===================================================================
+                      00197 
+                      00198 
+                      00199 
+                      00200 
+Warning[205]: Found directive in column 1. (END)
+                      00519 END
+MPASM  5.31                      EDIFICIO.ASM   1-8-2019  20:00:37         PAGE 15
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+C                                 00000000
+DC                                00000001
+EEADR                             00000009
+EECON1                            00000088
+EECON2                            00000089
+EEDATA                            00000008
+EEIE                              00000006
+EEIF                              00000004
+F                                 00000001
+FSR                               00000004
+GIE                               00000007
+INDF                              00000000
+INICIO                            00000003
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+NOT_PD                            00000003
+NOT_RBPU                          00000007
+NOT_TO                            00000004
+OPTION_REG                        00000081
+PCL                               00000002
+PCLATH                            0000000A
+PORTA                             00000005
+PORTB                             00000006
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+R1Decima_BucleExterno             0000020F
+R1Decima_BucleExterno2            0000020D
+R1Decima_BucleInterno             00000211
+R1ms_BucleExterno                 000001F9
+R1ms_BucleInterno                 000001FB
+RBIE                              00000003
+RBIF                              00000000
+RD                                00000000
+RP0                               00000005
+RP1                               00000006
+R_ContA                           0000000C
+R_ContB                           0000000D
+R_ContC                           0000000E
+RetardoMicros                     000001E5
+Retardo_100micros                 000001DF
+Retardo_100ms                     000001EB
+Retardo_10micros                  000001D2
+Retardo_10ms                      000001F1
+Retardo_10s                       00000203
+Retardo_1Decima                   0000020C
+Retardo_1ms                       000001F7
+Retardo_1s                        00000209
+Retardo_200micros                 000001DC
+MPASM  5.31                      EDIFICIO.ASM   1-8-2019  20:00:37         PAGE 16
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+Retardo_200ms                     000001E9
+Retardo_20micros                  000001E4
+Retardo_20ms                      000001EF
+Retardo_20s                       00000201
+Retardo_2ms                       000001F5
+Retardo_2s                        00000207
+Retardo_4micros                   000001D8
+Retardo_500micros                 000001D9
+Retardo_500ms                     0000020B
+Retardo_50micros                  000001E1
+Retardo_50ms                      000001ED
+Retardo_5micros                   000001D7
+Retardo_5ms                       000001F3
+Retardo_5s                        00000205
+Retardos_ms                       000001F8
+Rmicros_Bucle                     000001E6
+STATUS                            00000003
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+TMR0                              00000001
+TRISA                             00000085
+TRISB                             00000086
+W                                 00000000
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_CP_OFF                           00003FFF
+_CP_ON                            0000000F
+_HS_OSC                           00003FFE
+_LP_OSC                           00003FFC
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_XT_OSC                           00003FFD
+__16F84A                          00000001
+__DEBUG                           1
+MPASM  5.31                      EDIFICIO.ASM   1-8-2019  20:00:37         PAGE 17
+
+
+MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
+
+
+0000 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0040 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0080 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+00C0 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0100 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0140 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0180 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+01C0 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0200 : XXXXXXXXXXXXXXXX XXXXXXXXX------- ---------------- ----------------
+2000 : -------X-------- ---------------- ---------------- ----------------
+
+All other memory blocks unused.
+
+Program Memory Words Used:   537
+Program Memory Words Free:   487
+
+
+Errors   :     0
+Warnings :    10 reported,     0 suppressed
+Messages :     1 reported,     0 suppressed
+
+

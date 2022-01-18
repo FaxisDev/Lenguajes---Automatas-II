@@ -1,0 +1,144 @@
+MPASM  5.31                          EXA1.ASM   10-31-2018  9:19:04         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[205]: Found directive in column 1. (__CONFIG)
+2007   3FF1           00001 __CONFIG _CP_OFF & _WDT_OFF & _PWRTE_ON & _XT_OSC
+Warning[205]: Found directive in column 1. (LIST)
+                      00002 LIST P=16F84A
+Warning[205]: Found directive in column 1. (INCLUDE)
+                      00003 INCLUDE <P16F84A.INC>
+                      00001         LIST
+                      00002 ; P16F84A.INC  Standard Header File, Version 2.00    Microchip Technology, Inc.
+                      00134         LIST
+                      00004 
+                      00005 
+                      00006 
+  00000005            00007 cons1 EQU d'5'
+  0000001A            00008 cons2 EQU d'26'
+  0000000D            00009 cons3 EQU d'13'
+  00000080            00010 cons4 EQU d'128'
+  0000001A            00011 cons5 EQU d'26'
+                      00012 
+Warning[205]: Found directive in column 1. (ORG)
+0000                  00013 ORG 0
+Warning[203]: Found opcode in column 1. (BSF)
+0000   1683           00014 BSF STATUS, RP0
+Warning[203]: Found opcode in column 1. (CLRF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0001   0186           00015 CLRF TRISB
+Warning[203]: Found opcode in column 1. (BCF)
+0002   1283           00016 BCF STATUS, RP0
+0003                  00017 PRINCIPAL
+                      00018 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0003   3005           00019 MOVLW cons1  ;VALOR DE 5
+Warning[203]: Found opcode in column 1. (ADDLW)
+0004   3E1A           00020 ADDLW cons5  ;VALOR DE 26
+Warning[203]: Found opcode in column 1. (SUBLW)
+0005   3C80           00021 SUBLW cons4  ;VALOR 128
+Warning[203]: Found opcode in column 1. (ADDLW)
+0006   3E1A           00022 ADDLW cons2  ;VALOR DE 8
+Warning[203]: Found opcode in column 1. (ADDLW)
+0007   3E0D           00023 ADDLW cons3  ;VALOR DE 13
+Warning[203]: Found opcode in column 1. (MOVWF)
+0008   0086           00024 MOVWF PORTB  ;LA SUMATORIA DE TODO ES 118.
+Warning[205]: Found directive in column 1. (END)
+                      00025 END
+MPASM  5.31                          EXA1.ASM   10-31-2018  9:19:04         PAGE  2
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+C                                 00000000
+DC                                00000001
+EEADR                             00000009
+EECON1                            00000088
+EECON2                            00000089
+EEDATA                            00000008
+EEIE                              00000006
+EEIF                              00000004
+F                                 00000001
+FSR                               00000004
+GIE                               00000007
+INDF                              00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+NOT_PD                            00000003
+NOT_RBPU                          00000007
+NOT_TO                            00000004
+OPTION_REG                        00000081
+PCL                               00000002
+PCLATH                            0000000A
+PORTA                             00000005
+PORTB                             00000006
+PRINCIPAL                         00000003
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+RBIE                              00000003
+RBIF                              00000000
+RD                                00000000
+RP0                               00000005
+RP1                               00000006
+STATUS                            00000003
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+TMR0                              00000001
+TRISA                             00000085
+TRISB                             00000086
+W                                 00000000
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_CP_OFF                           00003FFF
+_CP_ON                            0000000F
+_HS_OSC                           00003FFE
+_LP_OSC                           00003FFC
+_PWRTE_OFF                        00003FFF
+MPASM  5.31                          EXA1.ASM   10-31-2018  9:19:04         PAGE  3
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_XT_OSC                           00003FFD
+__16F84A                          00000001
+__DEBUG                           1
+cons1                             00000005
+cons2                             0000001A
+cons3                             0000000D
+cons4                             00000080
+cons5                             0000001A
+
+
+MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
+
+0000 : XXXXXXXXX------- ---------------- ---------------- ----------------
+2000 : -------X-------- ---------------- ---------------- ----------------
+
+All other memory blocks unused.
+
+Program Memory Words Used:     9
+Program Memory Words Free:  1015
+
+
+Errors   :     0
+Warnings :    14 reported,     0 suppressed
+Messages :     1 reported,     0 suppressed
+
+

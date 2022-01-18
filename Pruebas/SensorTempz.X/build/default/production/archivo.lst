@@ -1,0 +1,138 @@
+MPASM 5.83                       ARCHIVO.ASM   7-13-2019  23:40:00         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[209]: Missing quote
+Error[124]  : Illegal argument (expected single character)
+Error[112]  : Missing operator
+  00000000            00001 Device = 16F877A        'DECLARAMOS EL PIC A USAR
+Warning[209]: Missing quote
+Error[124]  : Illegal argument (expected single character)
+Error[112]  : Missing operator
+  00000000            00002 XTAL = 4                 'CRYSTAL DE 4Mhz
+                      00003  
+                      00004 
+Error[122]  : Illegal opcode (LCD_TYPE)
+                      00005 Declare LCD_TYPE 0           'DECLARAMOS LOS PUERTOS DE SALIDA Y DE PROGRAMACION.
+Error[122]  : Illegal opcode (LCD_DTPIN)
+                      00006 Declare LCD_DTPIN PORTD.4
+Error[122]  : Illegal opcode (LCD_RSPIN)
+                      00007 Declare LCD_RSPIN PORTD.2 
+Error[122]  : Illegal opcode (LCD_ENPIN)
+                      00008 Declare LCD_ENPIN PORTD.3
+Error[108]  : Illegal character (2)
+                      00009 LCD_LINES 2
+                      00010 
+                      00011 
+Warning[209]: Missing quote
+Error[124]  : Illegal argument (expected single character)
+Error[112]  : Missing operator
+  00000000            00012 TRISD=0                     'PUERTO D COMO SALIDA.
+Warning[209]: Missing quote
+Error[124]  : Illegal argument (expected single character)
+Error[112]  : Missing operator
+  00000000            00013 TRISA.0=1                    'PUERTO A.0 COMO ENTRADA ANALOGICA.
+Error[128]  : Missing argument(s)
+  00000000            00014 ADCON1=%100000                    
+Error[122]  : Illegal opcode (adc)
+  00000000            00015 Dim adc As Float 
+Error[122]  : Illegal opcode (resultado)
+  00000000            00016 Dim resultado As Float 
+                      00017    
+Warning[207]: Found label after column 1. (Print)
+Error[122]  : Illegal opcode (At)
+                      00018      Print At 1,1, "   SENSOR DE    "        'FRASES AL COMENSAR LA PROGRAMACION.
+Warning[207]: Found label after column 1. (Print)
+Error[122]  : Illegal opcode (At)
+                      00019      Print At 2,1, "TEMPERATURA LM35"
+Warning[207]: Found label after column 1. (DelayMS)
+Error[108]  : Illegal character (3)
+                      00020      DelayMS 3000
+Warning[207]: Found label after column 1. (Print)
+Error[122]  : Illegal opcode (At)
+                      00021      Print At 1,1, "                "
+Warning[207]: Found label after column 1. (Print)
+Error[122]  : Illegal opcode (At)
+                      00022      Print At 2,1, "                "
+Warning[207]: Found label after column 1. (DelayMS)
+MPASM 5.83                       ARCHIVO.ASM   7-13-2019  23:40:00         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Error[108]  : Illegal character (5)
+                      00023      DelayMS 500
+                      00024      
+Warning[207]: Found label after column 1. (Print)
+Error[122]  : Illegal opcode (At)
+                      00025      Print At 1,1, " PROGRAMADO CON "
+Warning[207]: Found label after column 1. (Print)
+Error[122]  : Illegal opcode (At)
+                      00026      Print At 2,1, "  PIC 16F877A   "
+Warning[207]: Found label after column 1. (DelayMS)
+Error[108]  : Illegal character (3)
+                      00027      DelayMS 3000
+Warning[207]: Found label after column 1. (Print)
+Error[122]  : Illegal opcode (At)
+                      00028      Print At 1,1, "               "
+Warning[207]: Found label after column 1. (Print)
+Error[122]  : Illegal opcode (At)
+                      00029      Print At 2,1, "               "
+Warning[207]: Found label after column 1. (DelayMS)
+Error[108]  : Illegal character (5)
+                      00030      DelayMS 500
+                      00031     
+Warning[207]: Found label after column 1. (inicio)
+Error[150]  : Labels must be defined in a code or data section when making an object file
+0000                  00032      inicio:
+Warning[207]: Found label after column 1. (Print)
+Error[122]  : Illegal opcode (At)
+0000                  00033          Print At 1,1, "  TEMPERATURA   "       'EN LA ?RIMERA FILA LA PALABRA TEMPERATURA.
+Warning[207]: Found label after column 1. (Print)
+Error[122]  : Illegal opcode (At)
+0000                  00034          Print At 2,1, "ACTUAL"                  'FILA 2 PALABRA ACTUAL ASTA COLUMNA 8.
+Warning[207]: Found label after column 1. (adc)
+Error[113]  : Symbol not previously defined (ADIn)
+Error[112]  : Missing operator
+  00000000            00035          adc = ADIn 0
+Warning[207]: Found label after column 1. (resultado)
+Warning[209]: Missing quote
+Error[124]  : Illegal argument (expected single character)
+Error[112]  : Missing operator
+  00000000            00036          resultado = adc * 500/65472              'AQUI APARESCE LA TEMPERATURA.
+Warning[207]: Found label after column 1. (Print)
+Error[122]  : Illegal opcode (At)
+  00000000            00037          Print At 2,8,DEC1,resultado,0
+Warning[207]: Found label after column 1. (Print)
+Error[122]  : Illegal opcode (At)
+  00000000            00038          Print At 2,12,"'C  "
+                      00039         
+                      00040      
+Error[151]  : Operand contains unresolvable labels or is too complex
+Error[152]  : Executable code and data must be defined in an appropriate section
+0000                  00041      GoTo inicio
+                      00042      End 
+MPASM 5.83                       ARCHIVO.ASM   7-13-2019  23:40:00         PAGE  3
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ADCON1                            00000000
+Device                            00000000
+TRISA.0                           00000000
+TRISD                             00000000
+XTAL                              00000000
+__16F877A                         00000001
+adc                               00000000
+inicio                            00000000
+resultado                         00000000
+
+Errors   :    39
+Warnings :    24 reported,     0 suppressed
+Messages :     0 reported,     0 suppressed
+
+

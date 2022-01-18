@@ -1,0 +1,34 @@
+MPLINK 4.31, Linker
+Linker Map File - Created Wed Oct 31 09:19:04 2018
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x000012
+      .config_2007_EXA1.O       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000008      
+                            0x002007    0x002007      
+            10 out of 1093 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                PRINCIPAL   0x000003    program     static C:\Users\Brandon Garcia G\Desktop\EXA1.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                PRINCIPAL   0x000003    program     static C:\Users\Brandon Garcia G\Desktop\EXA1.asm
+
+

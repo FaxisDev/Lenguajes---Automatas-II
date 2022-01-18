@@ -1,0 +1,39 @@
+__CONFIG _CP_OFF & _WDT_OFF & _PWRTE_ON & _XT_OSC
+LIST P=16F84A
+INCLUDE <P16F84A.INC>
+
+ORG 0
+INICIO
+BSF STATUS,RP0
+CLRF PORTB
+MOVLW b'00011111'
+MOVWF PORTA
+BCF STATUS,RP0
+
+MOVLW b'01111111'
+MOVWF PORTB
+
+Principal
+
+MOVF PORTA,W
+ANDLW b'00000111'
+CALL Binario_a_7Segmentos
+MOVWF PORTB
+
+GOTO Principal
+
+Binario_a_7Segmentos
+
+ADDWF PCL,F
+Tabla
+
+RETLW b'01110001' ;Valor igual a F
+RETLW b'01111001' ;Valor igual a E
+RETLW b'01011110' ;Valor igual a D
+RETLW b'00111001' ;Valor igual a C
+RETLW b'01111100' ;Valor igual a B
+RETLW b'01110111' ;Valor igual a A
+RETLW b'01100111' ;Valor igual a 9
+RETLW b'01111111' ;Valor igual a 8
+END
+

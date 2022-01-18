@@ -1,0 +1,179 @@
+MPASM  5.31                      DISPLAY7.ASM   12-17-2018  18:31:18         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[205]: Found directive in column 1. (__CONFIG)
+2007   3FF1           00001 __CONFIG _CP_OFF & _WDT_OFF & _PWRTE_ON & _XT_OSC
+Warning[205]: Found directive in column 1. (LIST)
+                      00002 LIST P=16F84A
+Warning[205]: Found directive in column 1. (INCLUDE)
+                      00003 INCLUDE <P16F84.INC>
+                      00001         LIST
+                      00002 ; P16F84.INC  Standard Header File, Version 2.00    Microchip Technology, Inc.
+Message[301]: MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+                      00136         LIST
+                      00004 
+Warning[205]: Found directive in column 1. (ORG)
+0000                  00005 ORG 0
+0000                  00006 INICIO
+Warning[203]: Found opcode in column 1. (BSF)
+0000   1683           00007 BSF STATUS,RP0
+Warning[203]: Found opcode in column 1. (CLRF)
+0001   0186           00008 CLRF PORTB
+Warning[203]: Found opcode in column 1. (MOVLW)
+0002   301F           00009 MOVLW b'00011111'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0003   0085           00010 MOVWF PORTA
+Warning[203]: Found opcode in column 1. (BCF)
+0004   1283           00011 BCF STATUS,RP0
+0005                  00012 Principal
+Warning[203]: Found opcode in column 1. (MOVF)
+0005   0805           00013 MOVF PORTA,W
+Warning[203]: Found opcode in column 1. (ANDLW)
+0006   390F           00014 ANDLW b'00001111'
+Warning[203]: Found opcode in column 1. (CALL)
+0007   200A           00015 CALL Binario_a_7Segmentos
+Warning[203]: Found opcode in column 1. (MOVWF)
+0008   0086           00016 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (GOTO)
+0009   2805           00017 GOTO Principal
+000A                  00018 Binario_a_7Segmentos
+Warning[203]: Found opcode in column 1. (ADDWF)
+000A   0782           00019 ADDWF PCL,F
+000B                  00020 Tabla
+Warning[203]: Found opcode in column 1. (RETLW)
+000B   343F           00021 RETLW b'00111111' ;Valor igual a 0
+Warning[203]: Found opcode in column 1. (RETLW)
+000C   3406           00022 RETLW b'00000110' ;Valor igual a 1
+Warning[203]: Found opcode in column 1. (RETLW)
+000D   345B           00023 RETLW b'01011011' ;Valor igual a 2
+Warning[203]: Found opcode in column 1. (RETLW)
+000E   344F           00024 RETLW b'01001111' ;Valor igual a 3
+Warning[203]: Found opcode in column 1. (RETLW)
+000F   3466           00025 RETLW b'01100110' ;Valor igual a 4
+Warning[203]: Found opcode in column 1. (RETLW)
+0010   346D           00026 RETLW b'01101101' ;Valor igual a 5
+Warning[203]: Found opcode in column 1. (RETLW)
+0011   347D           00027 RETLW b'01111101' ;Valor igual a 6
+MPASM  5.31                      DISPLAY7.ASM   12-17-2018  18:31:18         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[203]: Found opcode in column 1. (RETLW)
+0012   3447           00028 RETLW b'01000111' ;Valor igual a 7
+Warning[203]: Found opcode in column 1. (RETLW)
+0013   347F           00029 RETLW b'01111111' ;Valor igual a 8
+Warning[203]: Found opcode in column 1. (RETLW)
+0014   3467           00030 RETLW b'01100111' ;Valor igual a 9
+Warning[203]: Found opcode in column 1. (RETLW)
+0015   3477           00031 RETLW b'01110111' ;Valor igual a A
+Warning[203]: Found opcode in column 1. (RETLW)
+0016   347C           00032 RETLW b'01111100' ;Valor igual a B
+Warning[203]: Found opcode in column 1. (RETLW)
+0017   3439           00033 RETLW b'00111001' ;Valor igual a C
+Warning[203]: Found opcode in column 1. (RETLW)
+0018   345F           00034 RETLW b'01011111' ;Valor igual a D
+Warning[203]: Found opcode in column 1. (RETLW)
+0019   3479           00035 RETLW b'01111001' ;Valor igual a E
+Warning[203]: Found opcode in column 1. (RETLW)
+001A   3471           00036 RETLW b'01110001' ;Valor igual a F
+                      00037 
+Warning[205]: Found directive in column 1. (END)
+                      00038 END
+MPASM  5.31                      DISPLAY7.ASM   12-17-2018  18:31:18         PAGE  3
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+Binario_a_7Segmentos              0000000A
+C                                 00000000
+DC                                00000001
+EEADR                             00000009
+EECON1                            00000088
+EECON2                            00000089
+EEDATA                            00000008
+EEIE                              00000006
+EEIF                              00000004
+F                                 00000001
+FSR                               00000004
+GIE                               00000007
+INDF                              00000000
+INICIO                            00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+NOT_PD                            00000003
+NOT_RBPU                          00000007
+NOT_TO                            00000004
+OPTION_REG                        00000081
+PCL                               00000002
+PCLATH                            0000000A
+PORTA                             00000005
+PORTB                             00000006
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+Principal                         00000005
+RBIE                              00000003
+RBIF                              00000000
+RD                                00000000
+RP0                               00000005
+RP1                               00000006
+STATUS                            00000003
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+TMR0                              00000001
+TRISA                             00000085
+TRISB                             00000086
+Tabla                             0000000B
+W                                 00000000
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_CP_OFF                           00003FFF
+_CP_ON                            0000000F
+MPASM  5.31                      DISPLAY7.ASM   12-17-2018  18:31:18         PAGE  4
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_HS_OSC                           00003FFE
+_LP_OSC                           00003FFC
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_XT_OSC                           00003FFD
+__16F84A                          00000001
+__DEBUG                           1
+
+
+MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
+
+0000 : XXXXXXXXXXXXXXXX XXXXXXXXXXX----- ---------------- ----------------
+2000 : -------X-------- ---------------- ---------------- ----------------
+
+All other memory blocks unused.
+
+Program Memory Words Used:    27
+Program Memory Words Free:   997
+
+
+Errors   :     0
+Warnings :    32 reported,     0 suppressed
+Messages :     1 reported,     0 suppressed
+
+

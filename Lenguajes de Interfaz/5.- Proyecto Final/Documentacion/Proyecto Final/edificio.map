@@ -1,0 +1,96 @@
+MPLINK 4.31, Linker
+Linker Map File - Created Tue Jan 08 20:00:38 2019
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x000432
+  .config_2007_EDIFICIO.O       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000218      
+                            0x002007    0x002007      
+            538 out of 1093 program addresses used, program memory utilization is 49%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000003    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\edificio.asm
+    R1Decima_BucleExterno   0x00020f    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+   R1Decima_BucleExterno2   0x00020d    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+    R1Decima_BucleInterno   0x000211    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+        R1ms_BucleExterno   0x0001f9    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+        R1ms_BucleInterno   0x0001fb    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+            RetardoMicros   0x0001e5    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+        Retardo_100micros   0x0001df    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+            Retardo_100ms   0x0001eb    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+         Retardo_10micros   0x0001d2    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+             Retardo_10ms   0x0001f1    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+              Retardo_10s   0x000203    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+          Retardo_1Decima   0x00020c    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+              Retardo_1ms   0x0001f7    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+               Retardo_1s   0x000209    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+        Retardo_200micros   0x0001dc    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+            Retardo_200ms   0x0001e9    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+         Retardo_20micros   0x0001e4    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+             Retardo_20ms   0x0001ef    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+              Retardo_20s   0x000201    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+              Retardo_2ms   0x0001f5    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+               Retardo_2s   0x000207    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+          Retardo_4micros   0x0001d8    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+        Retardo_500micros   0x0001d9    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+            Retardo_500ms   0x00020b    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+         Retardo_50micros   0x0001e1    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+             Retardo_50ms   0x0001ed    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+          Retardo_5micros   0x0001d7    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+              Retardo_5ms   0x0001f3    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+               Retardo_5s   0x000205    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+              Retardos_ms   0x0001f8    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+            Rmicros_Bucle   0x0001e6    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000003    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\edificio.asm
+         Retardo_10micros   0x0001d2    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+          Retardo_5micros   0x0001d7    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+          Retardo_4micros   0x0001d8    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+        Retardo_500micros   0x0001d9    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+        Retardo_200micros   0x0001dc    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+        Retardo_100micros   0x0001df    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+         Retardo_50micros   0x0001e1    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+         Retardo_20micros   0x0001e4    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+            RetardoMicros   0x0001e5    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+            Rmicros_Bucle   0x0001e6    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+            Retardo_200ms   0x0001e9    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+            Retardo_100ms   0x0001eb    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+             Retardo_50ms   0x0001ed    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+             Retardo_20ms   0x0001ef    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+             Retardo_10ms   0x0001f1    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+              Retardo_5ms   0x0001f3    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+              Retardo_2ms   0x0001f5    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+              Retardo_1ms   0x0001f7    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+              Retardos_ms   0x0001f8    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+        R1ms_BucleExterno   0x0001f9    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+        R1ms_BucleInterno   0x0001fb    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+              Retardo_20s   0x000201    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+              Retardo_10s   0x000203    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+               Retardo_5s   0x000205    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+               Retardo_2s   0x000207    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+               Retardo_1s   0x000209    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+            Retardo_500ms   0x00020b    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+          Retardo_1Decima   0x00020c    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+   R1Decima_BucleExterno2   0x00020d    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+    R1Decima_BucleExterno   0x00020f    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+    R1Decima_BucleInterno   0x000211    program     static C:\Users\BrandonGarcia\Desktop\Proyecto Final\Retardos.inc
+
+

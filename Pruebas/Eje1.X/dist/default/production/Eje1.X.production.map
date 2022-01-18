@@ -1,0 +1,36 @@
+MPLINK 5.09, LINKER
+Linker Map File - Created Sat Apr 13 22:50:44 2019
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000012
+                   .cinit    romdata   0x000009    program   0x000004
+.config_2007_BUILD/DEFAULT/PRODUCTION/EJECUTO       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00000a      
+                            0x002007    0x002007      
+            12 out of 1094 program addresses used, program memory utilization is 1%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+              DECLARACION   0x000000    program     static C:\Users\Arfaxad Zadot\Desktop\Materias\Lenguajes & Automatas II\Pruebas\Eje1.X\Ejecutor1.asm
+                 PROGRAMA   0x000006    program     static C:\Users\Arfaxad Zadot\Desktop\Materias\Lenguajes & Automatas II\Pruebas\Eje1.X\Ejecutor1.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+              DECLARACION   0x000000    program     static C:\Users\Arfaxad Zadot\Desktop\Materias\Lenguajes & Automatas II\Pruebas\Eje1.X\Ejecutor1.asm
+                 PROGRAMA   0x000006    program     static C:\Users\Arfaxad Zadot\Desktop\Materias\Lenguajes & Automatas II\Pruebas\Eje1.X\Ejecutor1.asm
+
+

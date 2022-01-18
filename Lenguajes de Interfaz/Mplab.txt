@@ -1,0 +1,8 @@
+1.- Proyect
+2.- Nombre proyect
+
+-- Debbuger-- Select Tool-- Mplab SIM
+-- Debbuger-- Settings
+
+File-- Add New File to Proyect-- Ruta de Donde Guardar
+Nobre de Archivo + Extension (.asm)

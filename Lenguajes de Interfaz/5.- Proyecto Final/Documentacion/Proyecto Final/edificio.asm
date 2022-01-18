@@ -1,0 +1,519 @@
+LIST P=16F84A
+   INCLUDE <P16F84A.INC>
+__CONFIG _CP_OFF & _WDT_OFF & _PWRTE_ON & _XT_OSC
+CBLOCK 0x0c
+
+ENDC 
+
+
+ORG 0
+
+BSF STATUS,RP0 ; BIT EN UNO
+CLRF TRISB     ;SALIDA
+BCF STATUS,RP0 ;INGRESO AL BANCO 0 
+
+
+INICIO ;PRIMERA FUNCION
+ 
+
+        MOVLW D'129'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW D'130'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW D'132'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW D'136'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW D'65'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW D'66'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW D'68'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW D'72'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW D'33'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW D'34'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW D'38'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW D'40'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW D'17'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW D'18'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW D'20'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW D'24'
+        MOVWF PORTB
+        call Retardo_500ms
+
+
+
+                          
+
+
+;INICIO DE SEGUNDA FUNCION 
+ 
+
+        MOVLW D'129'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'130'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'132'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'136'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'65'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'66'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'68'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'72'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'33'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'34'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'38'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'40'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'17'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'18'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'20'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'24'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'129'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'130'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'132'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'136'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'65'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'66'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'68'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'72'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'33'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'34'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'38'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'40'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'17'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'18'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'20'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'24'
+        MOVWF PORTB
+        call Retardo_100ms
+
+                                             
+;INICIO TERCERA FUNCION 
+
+
+        MOVLW D'143'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW D'79'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW D'47'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW D'31'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW D'143'
+        MOVWF PORTB
+        call Retardo_200ms
+        MOVLW D'79'
+        MOVWF PORTB
+        call Retardo_200ms
+        MOVLW D'47'
+        MOVWF PORTB
+        call Retardo_200ms
+        MOVLW D'31'
+        MOVWF PORTB
+        call Retardo_200ms
+
+                                        
+;INICIO DE CUARTA FUNCION
+
+        MOVLW D'17'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'18'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'20'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'24'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'33'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'34'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'38'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'40'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'65'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'66'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'68'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'72'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'129'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'130'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'132'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'136'
+        MOVWF PORTB
+        call Retardo_100ms
+         MOVLW D'17'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'18'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'20'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'24'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'33'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'34'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'38'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'40'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'65'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'66'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'68'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'72'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'129'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'130'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'132'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW D'136'
+        MOVWF PORTB
+        call Retardo_100ms
+
+                                   
+
+; INICIO QUINTA FUNCION 
+
+        MOVLW B'11111111'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11111110'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11111101'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11111011'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11110111'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11111111'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11111110'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11111101'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11111011'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11110111'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11111111'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11111110'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11111101'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11111011'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11110111'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11111111'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11111110'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11111101'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11111011'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11110111'
+        MOVWF PORTB
+        call Retardo_500ms
+
+        MOVLW B'11111111'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111110'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111101'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111011'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11110111'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111111'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111110'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111101'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111011'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11110111'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111111'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111110'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111101'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111011'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11110111'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111111'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111110'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111101'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111011'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11110111'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111111'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111110'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111101'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111011'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11110111'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111111'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111110'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111101'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111011'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11110111'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111111'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111110'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111101'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111011'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11110111'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111111'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111110'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111101'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11111011'
+        MOVWF PORTB
+        call Retardo_100ms
+        MOVLW B'11110111'
+        MOVWF PORTB
+        call Retardo_100ms
+
+        ;SEXTA FUNCION
+
+        MOVLW B'11111111'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11111111'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11111111'
+        MOVWF PORTB
+        call Retardo_500ms
+         MOVLW B'11111111'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11111111'
+        MOVWF PORTB
+        call Retardo_500ms
+        MOVLW B'11111111'
+        MOVWF PORTB
+        call Retardo_500ms
+
+
+        
+
+        goto INICIO
+
+
+
+
+
+include<Retardos.inc>
+END

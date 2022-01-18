@@ -1,0 +1,42 @@
+MPLINK 4.31, Linker
+Linker Map File - Created Mon Nov 12 08:56:00 2018
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x000026
+ .config_2007_PRACTICA2.O       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000012      
+                            0x002007    0x002007      
+            20 out of 1093 program addresses used, program memory utilization is 1%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                      AC1   0x00000d    program     static C:\Users\Brandon Garcia G\Desktop\Nueva carpeta\Practica2.asm
+                      AC2   0x000010    program     static C:\Users\Brandon Garcia G\Desktop\Nueva carpeta\Practica2.asm
+                  PRIMERA   0x000007    program     static C:\Users\Brandon Garcia G\Desktop\Nueva carpeta\Practica2.asm
+                PRINCIPAL   0x000005    program     static C:\Users\Brandon Garcia G\Desktop\Nueva carpeta\Practica2.asm
+                  SEGUNDA   0x00000a    program     static C:\Users\Brandon Garcia G\Desktop\Nueva carpeta\Practica2.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                PRINCIPAL   0x000005    program     static C:\Users\Brandon Garcia G\Desktop\Nueva carpeta\Practica2.asm
+                  PRIMERA   0x000007    program     static C:\Users\Brandon Garcia G\Desktop\Nueva carpeta\Practica2.asm
+                  SEGUNDA   0x00000a    program     static C:\Users\Brandon Garcia G\Desktop\Nueva carpeta\Practica2.asm
+                      AC1   0x00000d    program     static C:\Users\Brandon Garcia G\Desktop\Nueva carpeta\Practica2.asm
+                      AC2   0x000010    program     static C:\Users\Brandon Garcia G\Desktop\Nueva carpeta\Practica2.asm
+
+
